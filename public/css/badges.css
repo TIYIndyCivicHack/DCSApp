@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+    width: 100%;
+}
+.badges-row {
+	margin-top: 20px;
+}
+.badges {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.badge-bottom {
+	margin-left: 40px;
+    /*margin-bottom: 45px;*/
+}
+
+.hexagon {
+    margin: 5px;
+	width: 100px;
+	height: 55px;
+	position: relative;
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid;
+}
+
+
+
+.finance-badge-1 {
+	background-color: #b30000;
+}
+.popover, .fade, .right, .in {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.finance-badge-2 {
+	background-color: #cc0000;
+}
+.finance-badge-3 {
+	background-color: #e60000;
+}
+.finance-badge-4 {
+	background-color: #ff0000;
+}
+.finance-badge-5 {
+	background-color: #ff1a1a;
+}
+.finance-badge-6 {
+	background-color: #ff3333;
+}
+.finance-badge-7 {
+	background-color: #ff4d4d;
+}
+
+
+.identity-badge-1 {
+	background-color: #000066;
+}
+.identity-badge-2 {
+	background-color: #000099;
+}
+.identity-badge-3 {
+	background-color: #0000cc;
+}
+.identity-badge-4 {
+	background-color: #0000ff;
+}
+.identity-badge-5 {
+	background-color: #3232ff;
+}
+.identity-badge-6 {
+	background-color: #6666ff;
+}
+.identity-badge-7 {
+	background-color: #9999ff;
+}
+
+
+.fa {
+	color: white;
+	margin-left: 25px;
+	margin-top: 5px;
+}
+.fa-lock {
+	margin-left: 35px;
+}
+
+
+.employment-badge-1 {
+	background-color: #b3b300;
+}
+.employment-badge-2 {
+	background-color: #cccc00;
+}
+.employment-badge-3 {
+	background-color: #e6e600;
+}
+.employment-badge-4 {
+	background-color: #ffff00;
+}
+.employment-badge-5 {
+	background-color: #ffff1a;
+}
+.employment-badge-6 {
+	background-color: #ffff33;
+}
+.employment-badge-7 {
+	background-color: #ffff4d;
+}
