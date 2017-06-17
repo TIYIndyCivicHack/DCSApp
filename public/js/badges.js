@@ -1,1 +1,1 @@
-var badge =
+var badge = 
