@@ -1,0 +1,23 @@
+img {
+    width: 100%;
+}
+
+.btn-primary {
+    border-right: solid 0.25px black;
+    border-left: solid 0.25px black;
+    border-bottom: solid 0.5px black;
+}
+
+.thumbnail, .profileCard, .taskCard {
+    margin: 0px;
+    padding: 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.panel-heading:hover{
+    transition: background-color 0.5s ease-in;
+    background-color: #df691a;
+}
