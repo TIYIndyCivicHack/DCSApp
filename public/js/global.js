@@ -1,0 +1,17 @@
+$(document).ready(function(){
+    $("#headingOne").click(function(){
+        $("#collapseOne").slideToggle();
+    });
+    $("#headingTwo").click(function(){
+        $("#collapseTwo").slideToggle();
+    });
+    $("#headingThree").click(function(){
+        $("#collapseThree").slideToggle();
+    });
+    $("#headingFour").click(function(){
+        $("#collapseFour").slideToggle();
+    });
+    $("#headingFive").click(function(){
+        $("#collapseFive").slideToggle();
+    });
+});
