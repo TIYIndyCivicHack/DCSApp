@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+    width: 100%;
+}
+.badges-row {
+	margin-top: 20px;
+}
+.badges {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.badge-bottom {
+	margin-left: 40px;
+    /*margin-bottom: 45px;*/
+}
+
+.hexagon {
+    margin: 5px;
+	width: 100px;
+	height: 55px;
+	background: red;
+	position: relative;
+}
+
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid red;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+}
+
+/*Hover Effect*/
+#categories li div:hover h1 {
+  bottom:50%;
+  padding-bottom:10%;
+}
+
+#categories li div:hover p{
+  top:50%;
+  padding-top:10%;
+}
