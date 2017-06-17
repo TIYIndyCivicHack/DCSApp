@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'sendgrid'
 gem 'rails-admin'
 gem 'bootstrap-sass'
+gem 'active_model_serializers'
 
 
 # Use jquery as the JavaScript library
