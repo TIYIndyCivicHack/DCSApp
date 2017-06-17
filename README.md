@@ -24,4 +24,74 @@ No test suite present
 
 * Deployment instructions
 
-* ...
+* API Endpoints
+GET Get a list of the User's Documents
+localhost:3000/api/documents?token=C3ZQnXWDUn4XPSTw6EqqDdRt
+GET /api/documents?token=:user_token
+
+Get a list of the current user's documents
+
+HEADERS
+Content-Typeapplication/json
+AuthorizationBasic Og==
+
+Sample Request
+Get a list of the User's Documents
+curl --request GET \
+  --url 'http://localhost:3000/api/documents?token=C3ZQnXWDUn4XPSTw6EqqDdRt' \
+  --header 'authorization: Basic Og==' \
+  --header 'content-type: application/json'
+POST Create a Document
+localhost:3000/api/documents?token=C3ZQnXWDUn4XPSTw6EqqDdRt
+POST /api/documents?token=:user_token
+
+Requires doc_type
+
+HEADERS
+Content-Typeapplication/json
+AuthorizationBasic Og==
+BODY
+{
+	"doc_type" : "License"
+}
+
+
+Sample Request
+Create a Document
+curl --request POST \
+  --url 'http://localhost:3000/api/documents?token=C3ZQnXWDUn4XPSTw6EqqDdRt' \
+  --header 'authorization: Basic Og==' \
+  --header 'content-type: application/json' \
+  --data '{
+	"doc_type" : "License"
+}'
+PATCH Edit a User's Document
+localhost:3000/api/documents/:id?token=C3ZQnXWDUn4XPSTw6EqqDdRt
+PATCH /api/documents/:id?token=:user_token
+
+Edit a user's documents
+
+HEADERS
+Content-Typeapplication/json
+AuthorizationBasic Og==
+BODY
+image
+
+
+Sample Request
+Edit a User's Document
+curl --request PATCH \
+  --url 'http://localhost:3000/api/documents/:id?token=C3ZQnXWDUn4XPSTw6EqqDdRt' \
+  --header 'authorization: Basic Og==' \
+  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
+DELETE Delete a User's Document
+localhost:3000/api/documents/:id?token=C3ZQnXWDUn4XPSTw6EqqDdRt
+DELETE /api/documents/:id?token=:user_token
+
+Delete a user's documents
+
+HEADERS
+Content-Typeapplication/json
+AuthorizationBasic Og==
+BODY
+image
