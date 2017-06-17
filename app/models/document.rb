@@ -4,6 +4,6 @@ class Document < ApplicationRecord
 
   belongs_to :user
 
-  mount_uploader :photo, DocumentUploader
-  
+  has_many :photos
+
 end

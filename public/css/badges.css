@@ -24,7 +24,6 @@ img {
 	height: 55px;
 	position: relative;
 }
-
 .hexagon:before {
 	content: "";
 	position: absolute;
@@ -52,6 +51,10 @@ img {
 
 .finance-badge-1 {
 	background-color: #b30000;
+}
+.popover, .fade, .right, .in {
+	display: flex;
+	flex-direction: row-reverse;
 }
 .finance-badge-2 {
 	background-color: #cc0000;
