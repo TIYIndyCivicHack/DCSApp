@@ -1,12 +1,14 @@
 class DocumentsController < ApplicationController
+  before_action :require_user
+  before_action :find_document, only: [:update, :destroy]
 
   def index
-    @documents = @user.documents.all
+    @documents = current_user.documents
     render json: @documents
   end
 
   def create
-    @document = @user.documents.new(doc_params)
+    @document = current_user.documents.new(doc_params)
       if @document.save
         render json: @document.reload
       else
@@ -29,8 +31,12 @@ class DocumentsController < ApplicationController
 
   private
 
-    def doc_params
-     params.permit(:type, :photo)
+   def doc_params
+     params.permit(:doc_type, :photo_id)
+   end
+
+   def find_document
+     @document = Document.find(params[:id])
    end
 
 end
