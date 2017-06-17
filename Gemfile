@@ -23,7 +23,7 @@ gem 'cloudinary'
 gem 'figaro'
 gem 'sendgrid'
 gem 'rails-admin'
-
+gem 'bootstrap-sass'
 
 
 # Use jquery as the JavaScript library
