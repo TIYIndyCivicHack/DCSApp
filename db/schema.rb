@@ -10,22 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617184950) do
+ActiveRecord::Schema.define(version: 20170702163134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "badges", force: :cascade do |t|
-    t.integer  "user_id"
     t.string   "category"
-    t.boolean  "complete"
-    t.boolean  "unlocked"
     t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "points"
     t.string   "description"
-    t.index ["user_id"], name: "index_badges_on_user_id", using: :btree
   end
 
   create_table "documents", force: :cascade do |t|
@@ -35,6 +31,17 @@ ActiveRecord::Schema.define(version: 20170617184950) do
     t.datetime "updated_at", null: false
     t.integer  "photo_id"
     t.index ["user_id"], name: "index_documents_on_user_id", using: :btree
+  end
+
+  create_table "memberships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "badge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "unlocked"
+    t.boolean  "complete"
+    t.index ["badge_id"], name: "index_memberships_on_badge_id", using: :btree
+    t.index ["user_id"], name: "index_memberships_on_user_id", using: :btree
   end
 
   create_table "photos", force: :cascade do |t|
@@ -60,7 +67,8 @@ ActiveRecord::Schema.define(version: 20170617184950) do
     t.integer  "earned_badges",                array: true
   end
 
-  add_foreign_key "badges", "users"
   add_foreign_key "documents", "photos"
   add_foreign_key "documents", "users"
+  add_foreign_key "memberships", "badges"
+  add_foreign_key "memberships", "users"
 end

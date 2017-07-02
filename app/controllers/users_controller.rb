@@ -8,8 +8,9 @@ class UsersController < ApplicationController
 
    def create
     create_user
-    if user.save
+    if @user.save
       render json: @user, serializer: UserExpandedSerializer
+      initial_badges
     else
       render json: @user.errors.full_messages, status: 400
     end
@@ -40,9 +41,17 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def create_user(user_params)
+  def create_user
     @user = User.new(user_params)
   end
 
+  def initial_badges
+    count = 1
+      while count <= 3 do
+        membership = @user.memberships.new(badge_id: count, user_id: @user, unlocked: true, complete: false)
+        count += 1 if membership.save
+      end
+    @user.reload
+  end
 
 end

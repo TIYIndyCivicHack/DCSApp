@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
 
   has_many :documents
   has_many :photos, through: :documents
-  
-  has_many :badges
 
+  has_many :memberships
+  has_many :badges, through: :memberships
+  
 end
